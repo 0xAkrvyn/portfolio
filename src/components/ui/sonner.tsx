@@ -1,0 +1,21 @@
+"use client";
+
+import { Toaster as Sonner, type ToasterProps } from "sonner";
+
+const Toaster = (props: ToasterProps) => (
+  <Sonner
+    className="toaster group"
+    style={
+      {
+        "--normal-bg": "var(--popover)",
+        "--normal-text": "var(--popover-foreground)",
+        "--normal-border": "var(--border)",
+        "--border-radius": "var(--radius)",
+      } as React.CSSProperties
+    }
+    toastOptions={{ classNames: { toast: "font-mono tracking-wider" } }}
+    {...props}
+  />
+);
+
+export { Toaster };
